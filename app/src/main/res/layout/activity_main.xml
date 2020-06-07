@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/myshape"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtPoids"
+            style="@style/StyleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poids : " />
+
+        <EditText
+            android:id="@+id/poids"
+            style="@style/StyleEditView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Poids"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtTaille"
+            style="@style/StyleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taille : " />
+
+        <EditText
+            android:id="@+id/taille"
+            style="@style/StyleEditView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Taille" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroupMesure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButtonCentimetre"
+            style="@style/StyleRadioBouton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Centimètre" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMetre"
+            style="@style/StyleRadioBouton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mètre" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonCalcul"
+            style="@style/StyleBouton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculer l'IMC" />
+
+        <Button
+            android:id="@+id/buttonReset"
+            style="@style/StyleBouton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Réinitialiser" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtAlerte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Vous devez cliquer sur le bouton « Calculer l'IMC » pour obtenir un résultat."
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_normal"
+        android:textStyle="italic|bold" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="@drawable/ic_healthcare_and_medical"
+            android:foregroundGravity="center_vertical|clip_horizontal|center"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="0dp"
+            android:text=""
+            android:textAlignment="gravity"
+            android:textColor="@color/colorText"
+            android:textSize="55sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
